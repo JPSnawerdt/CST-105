@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nfldraft.MyDraftedPlayersController">
+   <children>
+      <Text layoutX="192.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Drafted Players" wrappingWidth="215.13671875">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <TableView fx:id="mydraftedplayers" layoutX="6.0" layoutY="70.0" prefHeight="200.0" prefWidth="593.0">
+        <columns>
+          <TableColumn fx:id="playername" prefWidth="306.0" text="Player Name" />
+          <TableColumn fx:id="playerposition" prefWidth="136.0" text="Position" />
+            <TableColumn fx:id="playergrade" prefWidth="150.0" text="Overall Grade" />
+        </columns>
+      </TableView>
+      <Button fx:id="returnbutton" layoutX="372.0" layoutY="332.0" mnemonicParsing="false" onAction="#returnbuttonaction" prefHeight="25.0" prefWidth="120.0" text="Return" />
+   </children>
+</AnchorPane>

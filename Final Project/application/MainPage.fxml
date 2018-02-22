@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nfldraft.MainPageController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="115.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="240.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="418.0" minHeight="10.0" prefHeight="418.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="71.0" minHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="186.0" text="Search for Player" GridPane.rowIndex="1">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="filterField" GridPane.rowIndex="2" />
+      <Button fx:id="endbutton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#enddraftbuttonaction" prefHeight="25.0" prefWidth="249.0" text="End Draft" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <TableView id="Maintable" fx:id="ViewPlayers" prefHeight="418.0" prefWidth="842.0" GridPane.columnSpan="4" GridPane.rowIndex="3">
+        <columns>
+          <TableColumn fx:id="NameTable" editable="false" prefWidth="264.0" text="Name" />
+          <TableColumn fx:id="PositionTable" editable="false" minWidth="0.0" prefWidth="137.0" text="Position" />
+            <TableColumn fx:id="GradeTable" editable="false" prefWidth="156.0" text="Overall Grade" />
+            <TableColumn fx:id="StatusTable" editable="false" prefWidth="242.0" text="Draft Status" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="removebutton" layoutX="37.0" layoutY="21.0" mnemonicParsing="false" onAction="#removeplayeraction" text="Remove Player" />
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="draftplayer" layoutX="75.0" layoutY="21.0" mnemonicParsing="false" onAction="#draftplayerbuttonaction" text="Draft Player" />
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="playerbutton" layoutX="68.0" layoutY="21.0" mnemonicParsing="false" onAction="#playerbuttonaction" text="Player Stats" />
+         </children>
+      </Pane>
+      <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="draftedbutton" layoutX="37.0" layoutY="21.0" mnemonicParsing="false" onAction="#draftedbuttonaction" text="My Drafted Players" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>

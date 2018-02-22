@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nfldraft.DefensivePlayerStatsController">
+   <children>
+      <Button fx:id="returnbutton" layoutX="41.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnbuttonactionitem" text="Return" />
+      <Label fx:id="namefield" contentDisplay="CENTER" layoutX="154.0" layoutY="50.0" prefHeight="17.0" prefWidth="414.0" textAlignment="CENTER">
+         <font>
+            <Font size="27.0" />
+         </font></Label>
+      <TableView fx:id="playertable" layoutX="24.0" layoutY="108.0" prefHeight="54.0" prefWidth="641.0">
+        <columns>
+          <TableColumn fx:id="agefield" editable="false" prefWidth="75.0" text="Age" />
+          <TableColumn fx:id="weightfield" editable="false" prefWidth="75.0" text="Weight" />
+            <TableColumn fx:id="heightfield" editable="false" prefWidth="75.0" text="Height" />
+            <TableColumn fx:id="positionfield" editable="false" prefWidth="75.0" text="Position" />
+            <TableColumn fx:id="speedfield" editable="false" prefWidth="83.0" text="Speed" />
+            <TableColumn fx:id="elusivenessfield" editable="false" prefWidth="91.0" text="Elusiveness" />
+            <TableColumn fx:id="gradefield" editable="false" prefWidth="161.0" text="Overall Grade" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="offensiveplayerstats" layoutX="24.0" layoutY="177.0" prefHeight="73.0" prefWidth="641.0">
+        <columns>
+          
+            <TableColumn fx:id="tacklesfield" prefWidth="98.0" text="Tackles" />
+            <TableColumn fx:id="sacksfield" prefWidth="105.0" text="Sacks" />
+            <TableColumn fx:id="forcedfumblesfield" prefWidth="105.0" text="Forced Fumbles" />
+            <TableColumn fx:id="interceptionsfield" prefWidth="101.0" text="Interceptions" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
